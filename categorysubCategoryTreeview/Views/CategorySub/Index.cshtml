@@ -1,0 +1,29 @@
+﻿
+
+@model List<CategoryViewModel>
+
+
+@{
+    Layout ="_Admin";
+}
+
+
+<div class="card-body">
+    <ul id="category" class="demo1">
+        @foreach (var item in Model)
+        {
+           
+            <li>
+                <input type="checkbox" /> @item.CategoryName
+                <ul>
+                    
+                    <partial name="_sub" model="item.Categories"/>
+                </ul>
+            </li>
+            
+        }
+     
+        
+    </ul>
+
+</div>

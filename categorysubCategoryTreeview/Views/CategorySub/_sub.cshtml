@@ -1,0 +1,15 @@
+﻿
+
+@model List<CategoryViewModel>
+
+
+    @foreach (var item in Model)
+    {
+        <li>
+            <input type="checkbox" /> @item.CategoryName
+            <ul>
+                <partial name="_sub" model="item.Categories"/>
+            </ul>
+        </li>
+    }
+    
